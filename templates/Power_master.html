@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}Power Master{% endblock %}
+
+{% block pagename %}Version site{% endblock %}
+
+{% block content %}
+    <div id="main">
+        <div class="b-table">
+            <div class="b-table__row">
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_sim_number">Panel type</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_120">Release version</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_120">Default version</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_80">VLM version</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_80">EEPROM version</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_80">Plink version</div>
+                <div class="b-table__cell b-table__cell_type_header b-table__cell_width_80">KP250 version</div>
+                <div class="b-table__cell b-table__cell_type_header">Comment</div>
+            </div>
+            {% for version in result %}
+                <a class="b-table__row" href="/panel-version/{{ version.id }}">
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.panel_type }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.release }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.default }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.vlm }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.eeprom_ver }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.plink.version }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.kp_250.version }}
+                    </div>
+                    <div class="b-table__cell table__cell_stats">
+                        {{ version.comment }}
+                    </div>
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}

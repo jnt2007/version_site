@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %}D:{{ version.default }} R:{{ version.release }}{% endblock %}
+
+{% block pagename %}{{ version.panel_type }} {{ version.release }}{% endblock %}
+
+{% block content %}
+    <div id="main">
+        <div class="b-table">
+            <div class="b-table__row">
+                <div class="b-table__cell b-table__cell_type_header table__cell_panel_details">Here is detalied info
+                    about panel version default {{ version.default }} and release {{ version.release }}</div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.panel_type }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.default }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.release }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.vlm }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.eeprom_ver }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.kp_250 }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.comment }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.p4_default }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.p4_release }}
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
