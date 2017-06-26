@@ -21,4 +21,5 @@ from dashboard import views
 urlpatterns = [
     url(r'^$', views.index),
     url(r'^admin/', admin.site.urls),
+    url(r'^panel-version/(?P<version_id>\d+)$', views.panel_version, name='panel_version_details'),
 ]

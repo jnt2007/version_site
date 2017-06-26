@@ -189,7 +189,7 @@ ul {
 }
 
 #main a {
-	color: #262626;
+	color: #6b6b6b;
 }
 
 #main strong {
@@ -303,6 +303,7 @@ ul {
 
 .b-table__row {
 	display: table-row;
+	text-decoration: none;
 	border-bottom: 1px solid #e6e6e6;
 }
 
@@ -316,4 +317,12 @@ ul {
 .b-table__cell_type_header {
 	vertical-align: middle;
 	font-weight: bold;
+}
+
+.table__cell_stats {
+	color: #ffffff;
+}
+
+.table__cell_panel_details {
+	text-align: left;
 }
