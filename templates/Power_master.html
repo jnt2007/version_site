@@ -1,4 +1,4 @@
-{% extends "base.html" %}
+{% extends "Base.html" %}
 
 {% block title %}Power Master{% endblock %}
 
@@ -41,7 +41,7 @@
                         {{ version.kp_250.version }}
                     </div>
                     <div class="b-table__cell table__cell_stats">
-                        {{ version.comment }}
+                        {{ version.comment|slice:":25" }}
                     </div>
                 </a>
             {% endfor %}
