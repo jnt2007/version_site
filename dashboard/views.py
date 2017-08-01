@@ -1,15 +1,17 @@
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
-from dashboard.models import PowerMaxVersion
+from dashboard.models import PowerMaxVersion, PanelVersion
 
 
 def index(request):
 
     result = PowerMaxVersion.objects.all()
+    panel_versions = PanelVersion.objects.all()
 
     context = {
         'result': result,
+        'panel_versions': panel_versions
     }
 
     return render(request, 'Power_master.html', context)

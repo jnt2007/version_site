@@ -317,6 +317,7 @@ ul {
 .b-table__cell_type_header {
 	vertical-align: middle;
 	font-weight: bold;
+	width: 100%;
 }
 
 .table__cell_stats {
@@ -325,4 +326,12 @@ ul {
 
 .table__cell_panel_details {
 	text-align: left;
+}
+
+.b-table__cell_col1 {
+	width: 60px;
+}
+
+.b-table__cell_col2 {
+	width: 100%;
 }

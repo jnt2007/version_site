@@ -36,8 +36,18 @@ class PlinkVersion(models.Model):
         return self.version
 
 
+class PanelVersion(models.Model):
+
+    version = models.CharField(max_length=30, blank=False)
+    comment = models.TextField(max_length=1000, blank=True)
+
+    def __str__(self):
+        return self.version
+
+
 class PowerMaxVersion(models.Model):
 
+    panel_version = models.ForeignKey(PanelVersion, blank=False)
     panel_type = models.CharField(max_length=30, blank=False)
     release = models.CharField(max_length=30, blank=False)
     default = models.CharField(max_length=30, blank=False)

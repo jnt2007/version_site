@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from dashboard.models import PowerMaxVersion, KP250Version, PlinkVersion
+from dashboard.models import PowerMaxVersion, KP250Version, PlinkVersion, PanelVersion
 
 
 # Register your models here.
@@ -20,3 +20,9 @@ class PlinkVersionAdmin(admin.ModelAdmin):
     pass
 
 admin.site.register(PlinkVersion, PlinkVersionAdmin)
+
+
+class PanelVersionAdmin(admin.ModelAdmin):
+    pass
+
+admin.site.register(PanelVersion, PanelVersionAdmin)
