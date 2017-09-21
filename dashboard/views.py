@@ -1,13 +1,20 @@
 from django.shortcuts import render, get_object_or_404
 
 # Create your views here.
+from django.template.defaultfilters import register
+
 from dashboard.models import PowerMaxVersion, PanelVersion
+
+
+@register.filter
+def in_category(things, category):
+    return things.filter(panel_version=category)
 
 
 def index(request):
 
-    result = PowerMaxVersion.objects.all()
-    panel_versions = PanelVersion.objects.all()
+    result = PowerMaxVersion.objects.order_by('panel_type').all()
+    panel_versions = PanelVersion.objects.order_by('-version').all()
 
     context = {
         'result': result,

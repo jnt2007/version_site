@@ -26,7 +26,7 @@
                         {{ panel_version }}
                     </div>
                     <div class="b-table__cell">
-                    {% for version in result %}
+                    {% for version in result|in_category:panel_version %}
                     <a class="b-table__row" href="/panel-version/{{ version.id }}">
                         <div class="b-table__cell table__cell_stats">
                             {{ version.panel_type }}
