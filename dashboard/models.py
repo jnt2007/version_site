@@ -45,6 +45,15 @@ class PanelVersion(models.Model):
         return self.version
 
 
+class IPMPVersion(models.Model):
+
+    version = models.CharField(max_length=30, blank=False)
+    comment = models.TextField(max_length=1000, blank=True)
+
+    def __str__(self):
+        return self.version
+
+
 class PowerMaxVersion(models.Model):
 
     panel_version = models.ForeignKey(PanelVersion, blank=False)
@@ -55,6 +64,7 @@ class PowerMaxVersion(models.Model):
     eeprom_ver = models.CharField(max_length=30, default='Unknown')
     plink = models.ForeignKey(PlinkVersion, on_delete=models.SET_NULL, null=True, blank=True)
     kp_250 = models.ForeignKey(KP250Version, on_delete=models.SET_NULL, null=True, blank=True)
+    ipmp = models.ForeignKey(IPMPVersion, on_delete=models.SET_NULL, null=True, blank=True)
     comment = models.TextField(max_length=1000, blank=True)
 
     p4_release = models.CharField(max_length=255, blank=False, validators=[p4_validator])

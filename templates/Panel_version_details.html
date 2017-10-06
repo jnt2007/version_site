@@ -8,9 +8,9 @@
     <div id="main">
         <div class="b-table">
             <div class="b-table__row">
+                <div class="b-table__cell b-table__cell_type_header table__cell_panel_details table__cell_attrs"></div>
                 <div class="b-table__cell b-table__cell_type_header table__cell_panel_details">Here is detalied info
                     about panel version default {{ version.default }} and release {{ version.release }}</div>
-                <div class="b-table__cell b-table__cell_type_header table__cell_panel_details"></div>
             </div>
             <div class="b-table__row" href="">
                 <div class="b-table__cell table__cell_stats table__cell_panel_details">
@@ -58,6 +58,14 @@
                 </div>
                 <div class="b-table__cell table__cell_stats table__cell_panel_details">
                     {{ result.kp_250 }}
+                </div>
+            </div>
+            <div class="b-table__row" href="">
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    IPMP version
+                </div>
+                <div class="b-table__cell table__cell_stats table__cell_panel_details">
+                    {{ result.ipmp }}
                 </div>
             </div>
             <div class="b-table__row" href="">
