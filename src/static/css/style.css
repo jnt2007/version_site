@@ -28,7 +28,7 @@ body {
 	font-size: 12pt;
 	line-height: 1.75em;
 	font-family: Arial, sans-serif;
-	background: #030707 url('/static/images/bg.jpg');
+	background: #030707 url('/src/staticatic/images/bg.jpg');
 	color: #c0c1c1;
 }
 
@@ -68,7 +68,7 @@ ul {
 }
 	
 #bg {
-	background: url('/static/images/shadow.png') top left repeat-x;
+	background: url('/src/staticatic/images/shadow.png') top left repeat-x;
 	padding: 0px 0 80px 0;
 }
 

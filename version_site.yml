@@ -1,0 +1,18 @@
+version: '2'
+
+services:
+  version_site:
+    container_name: version_site
+    image: docker.visonic.com/system/version_site:latest
+    container_name: version_site
+    hostname: version_site
+    volumes:
+#      - /etc/localtime:/etc/localtime:ro
+      - /home/anton/version_site/data:/etc/version_site/data:Z
+    ports:
+      - 8080:8080
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "2k"
+        max-file: "2"
